@@ -1,1 +1,5 @@
-helm install --repo https://raw.githubusercontent.com/kubernetes-sigs/cloud-provider-azure/master/helm/repo cloud-provider-azure --generate-name --set cloudControllerManager.imageRepository=mcr.microsoft.com/oss/kubernetes --set cloudControllerManager.imageName=azure-cloud-controller-manager --set cloudControllerManager.imageTag=v0.6.0 --set cloudNodeManager.imageRepository=mcr.microsoft.com/oss/kubernetes --set cloudNodeManager.imageName=azure-cloud-node-manager --set cloudNodeManager.imageTag=v0.6.0
+## Label node
+k label no master-1 node-role.kubernetes.io/master=
+
+## Add nodes to Load Balancer BE pool in portal
+[pools](doc/lbpool.png)
