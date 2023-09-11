@@ -1,0 +1,22 @@
+/etc/kubernetes/azure.json
+helm install --repo https://raw.githubusercontent.com/kubernetes-sigs/cloud-provider-azure/master/helm/repo cloud-provider-azure --generate-name --set cloudControllerManager.imageRepository=mcr.microsoft.com/oss/kubernetes --set cloudControllerManager.imageName=azure-cloud-controller-manager --set cloudNodeManager.imageRepository=mcr.microsoft.com/oss/kubernetes --set cloudNodeManager.imageName=azure-cloud-node-manager
+
+removed route tables
+{
+  "cloud":"AzurePublicCloud",
+  "tenantId": "d831639f-a912-4e54-89a1-6e82b71411e2",
+  "aadClientId": "54a634cf-dde1-44ef-8e18-62628767bd2c",
+  "aadClientSecret": "JfC8Q~P8wUZI8ALJ33gnF4wp85Ka6XcGJGWmKbtV",
+  "subscriptionId": "e9300e42-85d3-4492-a229-d1d94b432676",
+  "resourceGroup": "ppf-k8s-rg",
+  "location": "westeurope",
+  "subnetName": "default",
+  "securityGroupName": "default",
+  "securityGroupResourceGroup": "ppf-k8s-rg",
+  "vnetName": "ppf-k8s-rg-vnet",
+  "vnetResourceGroup": "ppf-k8s-rg",
+  "primaryAvailabilitySetName": "load-balancer-as",
+  "cloudProviderBackoff": false,
+  "useManagedIdentityExtension": false,
+  "useInstanceMetadata": true
+}
