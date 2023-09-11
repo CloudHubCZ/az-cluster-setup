@@ -173,7 +173,7 @@ spec:
             - "--allocate-node-cidrs=true" # "false" for Azure CNI and "true" for other network plugins
             - "--cloud-config=/etc/kubernetes/cloud-config/azure.json"
             - "--cloud-provider=azure"
-            - "--cluster-cidr=10.244.0.0/24"
+            - "--cluster-cidr=172.17.0.0/24"
             - "--cluster-name=k8s"
             - "--controllers=*,-cloud-node" # disable cloud-node controller
             - "--configure-cloud-routes=true" # "false" for Azure CNI and "true" for other network plugins

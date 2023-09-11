@@ -7,7 +7,7 @@ spec:
   - Workload
   - Tunnel
   blockSize: 26
-  cidr: 172.17.0.0/16
+  cidr: 172.17.0.0/24
   ipipMode: Always
   natOutgoing: true
   nodeSelector: all()

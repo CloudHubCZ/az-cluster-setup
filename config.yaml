@@ -3,5 +3,5 @@ kind: ClusterConfiguration
 clusterName: "cloudhub-cluster"
 networking:
   serviceSubnet: 10.96.0.0/12
-  podSubnet: 10.224.0.0/16
+  podSubnet: 172.17.0.0/24
   dnsDomain: cluster.local
